@@ -14,9 +14,9 @@ export default function Search({ placeholder }: { placeholder: string }) {
     console.log(`Searching... ${term}`);
 
     const params = new URLSearchParams(searchParams);
+    params.set('page', '1');
 
-    // Update the "query" search param if it is NOT empty
-    // Else, delete it
+    // Update the "query" search param if it is NOT empty; else, delete it
     if (term) {
       params.set('query', term);
     } else {
