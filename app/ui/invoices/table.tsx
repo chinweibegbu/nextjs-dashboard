@@ -44,7 +44,9 @@ export default async function InvoicesTable({
                     <p className="text-xl font-medium">
                       {formatCurrency(invoice.amount)}
                     </p>
-                    <p>{formatDateToLocal(invoice.date)}</p>
+                    <p>
+                      {formatDateToLocal(invoice.date)}
+                    </p>
                   </div>
                   <div className="flex justify-end gap-2">
                     <UpdateInvoice id={invoice.id} />
